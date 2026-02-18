@@ -6,8 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203222F45FD48005B0E55 /* Tempus_FugitApp.swift */; };
+		D99203252F45FD48005B0E55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203242F45FD48005B0E55 /* ContentView.swift */; };
+		D99203272F45FD4A005B0E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99203262F45FD4A005B0E55 /* Assets.xcassets */; };
+		D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203282F45FD4A005B0E55 /* Persistence.swift */; };
+		D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D992032A2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D992031F2F45FD48005B0E55 /* Tempus Fugit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempus Fugit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99203222F45FD48005B0E55 /* Tempus_FugitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempus_FugitApp.swift; sourceTree = "<group>"; };
+		D99203242F45FD48005B0E55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D99203262F45FD4A005B0E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D99203282F45FD4A005B0E55 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D992032B2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tempus_Fugit.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +46,12 @@
 			isa = PBXGroup;
 			children = (
 				D99203212F45FD48005B0E55 /* Tempus Fugit */,
+				D99203392F46094E005B0E55 /* Services */,
+				D99203322F460874005B0E55 /* Model */,
+				D99203362F4608C8005B0E55 /* ViewModel */,
+				D99203372F4608E0005B0E55 /* View */,
+				D99203222F45FD48005B0E55 /* Tempus_FugitApp.swift */,
+				D99203262F45FD4A005B0E55 /* Assets.xcassets */,
 				D99203202F45FD48005B0E55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +62,53 @@
 				D992031F2F45FD48005B0E55 /* Tempus Fugit.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D99203322F460874005B0E55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D99203362F4608C8005B0E55 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D99203372F4608E0005B0E55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D99203242F45FD48005B0E55 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D99203382F4608ED005B0E55 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				D992032A2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld */,
+				D99203282F45FD4A005B0E55 /* Persistence.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		D99203392F46094E005B0E55 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D992033A2F46096C005B0E55 /* Network */,
+				D99203382F4608ED005B0E55 /* CoreData */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D992033A2F46096C005B0E55 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +175,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99203272F45FD4A005B0E55 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */,
+				D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */,
+				D99203252F45FD48005B0E55 /* ContentView.swift in Sources */,
+				D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +405,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D992032A2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D992032B2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodel */,
+			);
+			currentVersion = D992032B2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodel */;
+			path = Tempus_Fugit.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D99203172F45FD48005B0E55 /* Project object */;
 }
