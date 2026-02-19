@@ -12,7 +12,35 @@
 		D99203272F45FD4A005B0E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99203262F45FD4A005B0E55 /* Assets.xcassets */; };
 		D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203282F45FD4A005B0E55 /* Persistence.swift */; };
 		D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D992032A2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld */; };
+		D992033D2F46A5B8005B0E55 /* WidgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992033C2F46A5B8005B0E55 /* WidgetsView.swift */; };
+		D99203452F475D47005B0E55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203442F475D47005B0E55 /* WidgetKit.framework */; };
+		D99203472F475D47005B0E55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203462F475D47005B0E55 /* SwiftUI.framework */; };
+		D99203562F475D49005B0E55 /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D99203422F475D47005B0E55 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D99203542F475D49005B0E55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D99203172F45FD48005B0E55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D99203412F475D47005B0E55;
+			remoteInfo = widgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D992035B2F475D4A005B0E55 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D99203562F475D49005B0E55 /* widgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D992031F2F45FD48005B0E55 /* Tempus Fugit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempus Fugit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,12 +49,34 @@
 		D99203262F45FD4A005B0E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D99203282F45FD4A005B0E55 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D992032B2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tempus_Fugit.xcdatamodel; sourceTree = "<group>"; };
+		D992033C2F46A5B8005B0E55 /* WidgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsView.swift; sourceTree = "<group>"; };
+		D99203422F475D47005B0E55 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99203442F475D47005B0E55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D99203462F475D47005B0E55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D99203572F475D49005B0E55 /* Exceptions for "widget" folder in "widgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D99203412F475D47005B0E55 /* widgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D99203212F45FD48005B0E55 /* Tempus Fugit */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Tempus Fugit";
+			sourceTree = "<group>";
+		};
+		D99203482F475D47005B0E55 /* widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D99203572F475D49005B0E55 /* Exceptions for "widget" folder in "widgetExtension" target */,
+			);
+			path = widget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -36,6 +86,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D992033F2F475D47005B0E55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D99203472F475D47005B0E55 /* SwiftUI.framework in Frameworks */,
+				D99203452F475D47005B0E55 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +111,7 @@
 				D99203372F4608E0005B0E55 /* View */,
 				D99203222F45FD48005B0E55 /* Tempus_FugitApp.swift */,
 				D99203262F45FD4A005B0E55 /* Assets.xcassets */,
+				D99203432F475D47005B0E55 /* Frameworks */,
 				D99203202F45FD48005B0E55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				D992031F2F45FD48005B0E55 /* Tempus Fugit.app */,
+				D99203422F475D47005B0E55 /* widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +142,7 @@
 		D99203372F4608E0005B0E55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D992033B2F46A597005B0E55 /* Widgets */,
 				D99203242F45FD48005B0E55 /* ContentView.swift */,
 			);
 			path = View;
@@ -111,6 +173,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		D992033B2F46A597005B0E55 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				D99203482F475D47005B0E55 /* widget */,
+				D992033C2F46A5B8005B0E55 /* WidgetsView.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		D99203432F475D47005B0E55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D99203442F475D47005B0E55 /* WidgetKit.framework */,
+				D99203462F475D47005B0E55 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,10 +201,12 @@
 				D992031B2F45FD48005B0E55 /* Sources */,
 				D992031C2F45FD48005B0E55 /* Frameworks */,
 				D992031D2F45FD48005B0E55 /* Resources */,
+				D992035B2F475D4A005B0E55 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D99203552F475D49005B0E55 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D99203212F45FD48005B0E55 /* Tempus Fugit */,
@@ -135,6 +217,28 @@
 			productName = "Tempus Fugit";
 			productReference = D992031F2F45FD48005B0E55 /* Tempus Fugit.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D99203412F475D47005B0E55 /* widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D99203582F475D4A005B0E55 /* Build configuration list for PBXNativeTarget "widgetExtension" */;
+			buildPhases = (
+				D992033E2F475D47005B0E55 /* Sources */,
+				D992033F2F475D47005B0E55 /* Frameworks */,
+				D99203402F475D47005B0E55 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D99203482F475D47005B0E55 /* widget */,
+			);
+			name = widgetExtension;
+			packageProductDependencies = (
+			);
+			productName = widgetExtension;
+			productReference = D99203422F475D47005B0E55 /* widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -147,6 +251,9 @@
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					D992031E2F45FD48005B0E55 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					D99203412F475D47005B0E55 = {
 						CreatedOnToolsVersion = 26.1;
 					};
 				};
@@ -166,6 +273,7 @@
 			projectRoot = "";
 			targets = (
 				D992031E2F45FD48005B0E55 /* Tempus Fugit */,
+				D99203412F475D47005B0E55 /* widgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -179,6 +287,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D99203402F475D47005B0E55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -188,12 +303,28 @@
 			files = (
 				D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */,
 				D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */,
+				D992033D2F46A5B8005B0E55 /* WidgetsView.swift in Sources */,
 				D99203252F45FD48005B0E55 /* ContentView.swift in Sources */,
 				D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D992033E2F475D47005B0E55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D99203552F475D49005B0E55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D99203412F475D47005B0E55 /* widgetExtension */;
+			targetProxy = D99203542F475D49005B0E55 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D992032D2F45FD4A005B0E55 /* Debug */ = {
@@ -383,6 +514,66 @@
 			};
 			name = Release;
 		};
+		D99203592F475D4A005B0E55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99V7CVHD5W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "m.Tempus-Fugit.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D992035A2F475D4A005B0E55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 99V7CVHD5W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "m.Tempus-Fugit.widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -400,6 +591,15 @@
 			buildConfigurations = (
 				D99203302F45FD4A005B0E55 /* Debug */,
 				D99203312F45FD4A005B0E55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D99203582F475D4A005B0E55 /* Build configuration list for PBXNativeTarget "widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D99203592F475D4A005B0E55 /* Debug */,
+				D992035A2F475D4A005B0E55 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
