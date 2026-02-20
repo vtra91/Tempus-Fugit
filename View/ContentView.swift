@@ -5,7 +5,15 @@ struct ContentView: View {
 
     var body: some View {
 
-        Text("привед медвед")
+        ZStack {
+            ScrollView(.vertical, showsIndicators: false) {
+                
+                ForEach(0..<20) { i in
+                    Circle()
+                        .fill(.red)
+                }
+            }
+        }
         }
     }
 
