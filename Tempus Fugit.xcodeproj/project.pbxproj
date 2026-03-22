@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203222F45FD48005B0E55 /* Tempus_FugitApp.swift */; };
-		D99203252F45FD48005B0E55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203242F45FD48005B0E55 /* ContentView.swift */; };
+		D99203252F45FD48005B0E55 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203242F45FD48005B0E55 /* MainScreen.swift */; };
 		D99203272F45FD4A005B0E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99203262F45FD4A005B0E55 /* Assets.xcassets */; };
 		D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203282F45FD4A005B0E55 /* Persistence.swift */; };
 		D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D992032A2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld */; };
@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		D992031F2F45FD48005B0E55 /* Tempus Fugit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempus Fugit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99203222F45FD48005B0E55 /* Tempus_FugitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempus_FugitApp.swift; sourceTree = "<group>"; };
-		D99203242F45FD48005B0E55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D99203242F45FD48005B0E55 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		D99203262F45FD4A005B0E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D99203282F45FD4A005B0E55 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D992032B2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tempus_Fugit.xcdatamodel; sourceTree = "<group>"; };
@@ -53,10 +53,11 @@
 		D99203422F475D47005B0E55 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99203442F475D47005B0E55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D99203462F475D47005B0E55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D9C2A7362F6F9B4F00E9FC3B /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D99203572F475D49005B0E55 /* Exceptions for "widget" folder in "widgetExtension" target */ = {
+		D9C284062F6EB93300D0FEF9 /* Exceptions for "widget" folder in "widgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -74,7 +75,7 @@
 		D99203482F475D47005B0E55 /* widget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D99203572F475D49005B0E55 /* Exceptions for "widget" folder in "widgetExtension" target */,
+				D9C284062F6EB93300D0FEF9 /* Exceptions for "widget" folder in "widgetExtension" target */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -135,6 +136,7 @@
 		D99203362F4608C8005B0E55 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D9C2A7362F6F9B4F00E9FC3B /* MainScreenVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -142,8 +144,9 @@
 		D99203372F4608E0005B0E55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D9C2A7352F6F8DDE00E9FC3B /* Chapters */,
 				D992033B2F46A597005B0E55 /* Widgets */,
-				D99203242F45FD48005B0E55 /* ContentView.swift */,
+				D99203242F45FD48005B0E55 /* MainScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +192,13 @@
 				D99203462F475D47005B0E55 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9C2A7352F6F8DDE00E9FC3B /* Chapters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chapters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,7 +314,7 @@
 				D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */,
 				D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */,
 				D992033D2F46A5B8005B0E55 /* WidgetsView.swift in Sources */,
-				D99203252F45FD48005B0E55 /* ContentView.swift in Sources */,
+				D99203252F45FD48005B0E55 /* MainScreen.swift in Sources */,
 				D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,8 +532,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99V7CVHD5W;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = widget/Info.plist;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = View/Widgets/widget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = widget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -552,8 +562,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 99V7CVHD5W;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = widget/Info.plist;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = View/Widgets/widget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = widget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

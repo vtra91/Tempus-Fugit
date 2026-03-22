@@ -1,10 +1,3 @@
-//
-//  Tempus_FugitApp.swift
-//  Tempus Fugit
-//
-//  Created by Сергей Мельников on 18.02.2026.
-//
-
 import SwiftUI
 import CoreData
 
@@ -14,7 +7,7 @@ struct Tempus_FugitApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
