@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreData
+import SwiftUIIntrospect
 
 struct MainScreen: View {
     let catchphrases = [
@@ -84,7 +85,21 @@ struct MainScreen: View {
         "Адам Сэндлер",
         "Джордж Клуни"
     ]
+    let chapters = [
+        "БД",
+        "ТИПС",
+        "УПП",
+        "ООП",
+        "ОАП",
+        "ИСС",
+        "ИСТ",
+        "ТИ",
+        "ИТ",
+        "ОС"
+    ]
+
     var body: some View {
+        NavigationStack {
         ZStack {
             Color("MainColors")
                 .ignoresSafeArea()
@@ -102,28 +117,76 @@ struct MainScreen: View {
                         .foregroundStyle(.white)
                         .multilineTextAlignment(.center)
                 }.padding()
+                
+
                 ScrollView(.vertical, showsIndicators: false) {
                     
-                    ForEach(0..<11) { i in
-                        ChapterBlock()
+                    ForEach(0..<10) { i in
+                        NavigationLink(value: chapters[i]) {
+                            ChapterBlock(chapterLink: chapters[i])
+                        }
+                        
                     }
                 }
+
+            }
+        }
+        .navigationDestination(for: String.self) { name in
+            switch name {
+            case "БД": DBView()
+            case "ТИПС":TIPSView()
+            case "УПП":UPPView()
+            case "ООП":OOPView()
+            case "ОАП":OAPView()
+            case "ИСС": ISSView()
+            case "ИСТ":ISTView()
+            case "ТИ": TIView()
+            case "ИТ":ITView()
+            case "ОС":OSView()
+            default: ISSView()
+                
+            }
+        }
+        }
+
+        .introspect(.navigationStack, on: .iOS(.v26, .v18)) {
+            $0.viewControllers.forEach { controller in
+                controller.view.backgroundColor = .clear
             }
         }
         }
     }
-
+    //ISSView()
 
 struct ChapterBlock: View {
+    var chapterLink: String
+    var chapterName: String {
+        switch chapterLink {
+        case "БД": "БАЗЫ ДАННЫХ"
+        case "ТИПС": "ТЕОРИЯ ИНФОРМАЦИОННЫХ ПРОЦЕССОВ И СИСТЕМ"
+        case "УПП": "УПРАВЛЕНИЕ ПРОГРАММНЫМИ ПРОЕКТАМИ"
+        case "ООП": "ОБЪЕКТНО-ОРИЕНТИРОВАННОЕ ПРОГРАММИРОВАНИЕ"
+        case "ОАП": "ОСНОВЫ АЛГОРИТМИЗАЦИИ И ПРОГРАММИРОВАНИЯ"
+        case "ИСС": "ИНФОКОММУНИКАЦИОННЫЕ СИСТЕМЫ И СЕТИ"
+        case "ИСТ": "ИНТЕЛЛЕКТУАЛЬНЫЕ СИСТЕМЫ И ТЕХНОЛОГИИ"
+        case "ТИ": "ТЕОРИЯ ИНФОРМАЦИИ"
+        case "ИТ": "ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ"
+        case "ОС": "ОПЕРАЦИОННЫЕ СИСТЕМЫ"
+        default: "МАТЕМАТИКА ВИЛЕНКИН ЖОХОВ ЧЕСНОКОВ"
+            
+        }
+    }
     var body: some View {
-        RoundedRectangle(cornerRadius: 24)
-            .fill(.green)
-            .frame(width: 350,height: 64)
-            .overlay() {
-                Text("Блок aaa")
-                    .font(.system(size: 22, weight: .bold))
-                    .foregroundStyle(.black)
-            }
+        ZStack {
+            RoundedRectangle(cornerRadius: 24)
+                .fill(.green)
+                .frame(width: 350,height: 64)
+                .overlay() {
+                    Text(chapterName)
+                        .font(.system(size: 18, weight: .bold))
+                        .foregroundStyle(.black)
+                }
+        }
     }
 }
 

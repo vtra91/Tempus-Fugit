@@ -16,6 +16,17 @@
 		D99203452F475D47005B0E55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203442F475D47005B0E55 /* WidgetKit.framework */; };
 		D99203472F475D47005B0E55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203462F475D47005B0E55 /* SwiftUI.framework */; };
 		D99203562F475D49005B0E55 /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D99203422F475D47005B0E55 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D9ED46632F70C55300632060 /* ISSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46612F70C34E00632060 /* ISSView.swift */; };
+		D9ED46652F70C8E800632060 /* DBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46642F70C8E800632060 /* DBView.swift */; };
+		D9ED46672F70C92500632060 /* TIPSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46662F70C92500632060 /* TIPSView.swift */; };
+		D9ED46692F70C92E00632060 /* UPPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46682F70C92E00632060 /* UPPView.swift */; };
+		D9ED466B2F70C92F00632060 /* OOPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED466A2F70C92F00632060 /* OOPView.swift */; };
+		D9ED466D2F70C93000632060 /* OAPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED466C2F70C93000632060 /* OAPView.swift */; };
+		D9ED466F2F70C93100632060 /* ISTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED466E2F70C93100632060 /* ISTView.swift */; };
+		D9ED46712F70C93200632060 /* TIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46702F70C93200632060 /* TIView.swift */; };
+		D9ED46732F70C93500632060 /* ITView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46722F70C93500632060 /* ITView.swift */; };
+		D9ED46752F70CB0300632060 /* OSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46742F70CB0300632060 /* OSView.swift */; };
+		D9ED46782F70CDE000632060 /* SwiftUIIntrospect in Frameworks */ = {isa = PBXBuildFile; productRef = D9ED46772F70CDE000632060 /* SwiftUIIntrospect */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +65,16 @@
 		D99203442F475D47005B0E55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D99203462F475D47005B0E55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		D9C2A7362F6F9B4F00E9FC3B /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
+		D9ED46612F70C34E00632060 /* ISSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSView.swift; sourceTree = "<group>"; };
+		D9ED46642F70C8E800632060 /* DBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBView.swift; sourceTree = "<group>"; };
+		D9ED46662F70C92500632060 /* TIPSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIPSView.swift; sourceTree = "<group>"; };
+		D9ED46682F70C92E00632060 /* UPPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UPPView.swift; sourceTree = "<group>"; };
+		D9ED466A2F70C92F00632060 /* OOPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OOPView.swift; sourceTree = "<group>"; };
+		D9ED466C2F70C93000632060 /* OAPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAPView.swift; sourceTree = "<group>"; };
+		D9ED466E2F70C93100632060 /* ISTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISTView.swift; sourceTree = "<group>"; };
+		D9ED46702F70C93200632060 /* TIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TIView.swift; sourceTree = "<group>"; };
+		D9ED46722F70C93500632060 /* ITView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITView.swift; sourceTree = "<group>"; };
+		D9ED46742F70CB0300632060 /* OSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -87,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9ED46782F70CDE000632060 /* SwiftUIIntrospect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +219,16 @@
 		D9C2A7352F6F8DDE00E9FC3B /* Chapters */ = {
 			isa = PBXGroup;
 			children = (
+				D9ED46742F70CB0300632060 /* OSView.swift */,
+				D9ED46722F70C93500632060 /* ITView.swift */,
+				D9ED46702F70C93200632060 /* TIView.swift */,
+				D9ED466E2F70C93100632060 /* ISTView.swift */,
+				D9ED466C2F70C93000632060 /* OAPView.swift */,
+				D9ED466A2F70C92F00632060 /* OOPView.swift */,
+				D9ED46682F70C92E00632060 /* UPPView.swift */,
+				D9ED46662F70C92500632060 /* TIPSView.swift */,
+				D9ED46612F70C34E00632060 /* ISSView.swift */,
+				D9ED46642F70C8E800632060 /* DBView.swift */,
 			);
 			path = Chapters;
 			sourceTree = "<group>";
@@ -223,6 +255,7 @@
 			);
 			name = "Tempus Fugit";
 			packageProductDependencies = (
+				D9ED46772F70CDE000632060 /* SwiftUIIntrospect */,
 			);
 			productName = "Tempus Fugit";
 			productReference = D992031F2F45FD48005B0E55 /* Tempus Fugit.app */;
@@ -277,6 +310,9 @@
 			);
 			mainGroup = D99203162F45FD48005B0E55;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D9ED46762F70CD7B00632060 /* XCLocalSwiftPackageReference "../../../Downloads/swiftui-introspect-26.0.1" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D99203202F45FD48005B0E55 /* Products */;
 			projectDirPath = "";
@@ -312,10 +348,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */,
+				D9ED466F2F70C93100632060 /* ISTView.swift in Sources */,
 				D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */,
 				D992033D2F46A5B8005B0E55 /* WidgetsView.swift in Sources */,
 				D99203252F45FD48005B0E55 /* MainScreen.swift in Sources */,
+				D9ED46632F70C55300632060 /* ISSView.swift in Sources */,
+				D9ED46672F70C92500632060 /* TIPSView.swift in Sources */,
 				D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */,
+				D9ED46752F70CB0300632060 /* OSView.swift in Sources */,
+				D9ED46692F70C92E00632060 /* UPPView.swift in Sources */,
+				D9ED46732F70C93500632060 /* ITView.swift in Sources */,
+				D9ED46652F70C8E800632060 /* DBView.swift in Sources */,
+				D9ED46712F70C93200632060 /* TIView.swift in Sources */,
+				D9ED466B2F70C92F00632060 /* OOPView.swift in Sources */,
+				D9ED466D2F70C93000632060 /* OAPView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,6 +661,21 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D9ED46762F70CD7B00632060 /* XCLocalSwiftPackageReference "../../../Downloads/swiftui-introspect-26.0.1" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../Downloads/swiftui-introspect-26.0.1";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D9ED46772F70CDE000632060 /* SwiftUIIntrospect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D9ED46762F70CD7B00632060 /* XCLocalSwiftPackageReference "../../../Downloads/swiftui-introspect-26.0.1" */;
+			productName = SwiftUIIntrospect;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D992032A2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld */ = {
