@@ -16,6 +16,7 @@
 		D99203452F475D47005B0E55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203442F475D47005B0E55 /* WidgetKit.framework */; };
 		D99203472F475D47005B0E55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203462F475D47005B0E55 /* SwiftUI.framework */; };
 		D99203562F475D49005B0E55 /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D99203422F475D47005B0E55 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D9B752242F76126A0057424A /* MainBlocksV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B752232F76126A0057424A /* MainBlocksV.swift */; };
 		D9ED46632F70C55300632060 /* ISSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46612F70C34E00632060 /* ISSView.swift */; };
 		D9ED46652F70C8E800632060 /* DBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46642F70C8E800632060 /* DBView.swift */; };
 		D9ED46672F70C92500632060 /* TIPSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46662F70C92500632060 /* TIPSView.swift */; };
@@ -64,6 +65,7 @@
 		D99203422F475D47005B0E55 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99203442F475D47005B0E55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D99203462F475D47005B0E55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D9B752232F76126A0057424A /* MainBlocksV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBlocksV.swift; sourceTree = "<group>"; };
 		D9C2A7362F6F9B4F00E9FC3B /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
 		D9ED46612F70C34E00632060 /* ISSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSView.swift; sourceTree = "<group>"; };
 		D9ED46642F70C8E800632060 /* DBView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		D99203372F4608E0005B0E55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D9B752222F7612260057424A /* MainBlocks */,
 				D9C2A7352F6F8DDE00E9FC3B /* Chapters */,
 				D992033B2F46A597005B0E55 /* Widgets */,
 				D99203242F45FD48005B0E55 /* MainScreen.swift */,
@@ -214,6 +217,14 @@
 				D99203462F475D47005B0E55 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9B752222F7612260057424A /* MainBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				D9B752232F76126A0057424A /* MainBlocksV.swift */,
+			);
+			path = MainBlocks;
 			sourceTree = "<group>";
 		};
 		D9C2A7352F6F8DDE00E9FC3B /* Chapters */ = {
@@ -352,6 +363,7 @@
 				D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */,
 				D992033D2F46A5B8005B0E55 /* WidgetsView.swift in Sources */,
 				D99203252F45FD48005B0E55 /* MainScreen.swift in Sources */,
+				D9B752242F76126A0057424A /* MainBlocksV.swift in Sources */,
 				D9ED46632F70C55300632060 /* ISSView.swift in Sources */,
 				D9ED46672F70C92500632060 /* TIPSView.swift in Sources */,
 				D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */,
