@@ -3,4 +3,80 @@
    uuid = "8F155852-F2A1-4E36-899E-39E30E540925"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFA02858-65AE-49BC-B15D-9C6329BAAC58"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "View/Widgets/widget/widgetControl.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "value"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "CFA02858-65AE-49BC-B15D-9C6329BAAC58 - 3bd3f7462ae83db6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "widgetExtension.StartTimerIntent.value.getter : Swift.Bool"
+                  moduleName = "widgetExtension.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/velstadt/Desktop/SwiftKEKW/Tempus%20Fugit/View/Widgets/widget/widgetControl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "CFA02858-65AE-49BC-B15D-9C6329BAAC58 - 8ba0499ca21d15a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "widgetExtension.StartTimerIntent.value.setter : Swift.Bool"
+                  moduleName = "widgetExtension.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/velstadt/Desktop/SwiftKEKW/Tempus%20Fugit/View/Widgets/widget/widgetControl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "CFA02858-65AE-49BC-B15D-9C6329BAAC58 - 889d4109814817b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "widgetExtension.StartTimerIntent.value.modify : Swift.Bool"
+                  moduleName = "widgetExtension.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/velstadt/Desktop/SwiftKEKW/Tempus%20Fugit/View/Widgets/widget/widgetControl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "CFA02858-65AE-49BC-B15D-9C6329BAAC58 - 369b61eacc77b7a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "widgetExtension.StartTimerIntent.$value.getter : AppIntents.IntentParameter&lt;Swift.Bool&gt;"
+                  moduleName = "widgetExtension.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/velstadt/Desktop/SwiftKEKW/Tempus%20Fugit/View/Widgets/widget/widgetControl.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

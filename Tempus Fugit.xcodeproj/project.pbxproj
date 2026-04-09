@@ -12,10 +12,14 @@
 		D99203272F45FD4A005B0E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99203262F45FD4A005B0E55 /* Assets.xcassets */; };
 		D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203282F45FD4A005B0E55 /* Persistence.swift */; };
 		D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D992032A2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld */; };
-		D992033D2F46A5B8005B0E55 /* WidgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D992033C2F46A5B8005B0E55 /* WidgetsView.swift */; };
 		D99203452F475D47005B0E55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203442F475D47005B0E55 /* WidgetKit.framework */; };
 		D99203472F475D47005B0E55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203462F475D47005B0E55 /* SwiftUI.framework */; };
 		D99203562F475D49005B0E55 /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D99203422F475D47005B0E55 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D9B73F352F86626A00B0D624 /* widgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B73F342F86626000B0D624 /* widgetsView.swift */; };
+		D9B73F3D2F87549200B0D624 /* MainBlocksM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B73F3C2F87542F00B0D624 /* MainBlocksM.swift */; };
+		D9B73F402F87613700B0D624 /* dataTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B73F3F2F8760F500B0D624 /* dataTerms.swift */; };
+		D9B73F422F87681A00B0D624 /* TermsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B73F412F87652700B0D624 /* TermsVM.swift */; };
+		D9B73F432F87682000B0D624 /* MainScreenVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C2A7362F6F9B4F00E9FC3B /* MainScreenVM.swift */; };
 		D9B752242F76126A0057424A /* MainBlocksV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B752232F76126A0057424A /* MainBlocksV.swift */; };
 		D9ED46632F70C55300632060 /* ISSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46612F70C34E00632060 /* ISSView.swift */; };
 		D9ED46652F70C8E800632060 /* DBView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9ED46642F70C8E800632060 /* DBView.swift */; };
@@ -61,10 +65,13 @@
 		D99203262F45FD4A005B0E55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D99203282F45FD4A005B0E55 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		D992032B2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tempus_Fugit.xcdatamodel; sourceTree = "<group>"; };
-		D992033C2F46A5B8005B0E55 /* WidgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetsView.swift; sourceTree = "<group>"; };
 		D99203422F475D47005B0E55 /* widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = widgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99203442F475D47005B0E55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D99203462F475D47005B0E55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D9B73F342F86626000B0D624 /* widgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetsView.swift; sourceTree = "<group>"; };
+		D9B73F3C2F87542F00B0D624 /* MainBlocksM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBlocksM.swift; sourceTree = "<group>"; };
+		D9B73F3F2F8760F500B0D624 /* dataTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataTerms.swift; sourceTree = "<group>"; };
+		D9B73F412F87652700B0D624 /* TermsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsVM.swift; sourceTree = "<group>"; };
 		D9B752232F76126A0057424A /* MainBlocksV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBlocksV.swift; sourceTree = "<group>"; };
 		D9C2A7362F6F9B4F00E9FC3B /* MainScreenVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVM.swift; sourceTree = "<group>"; };
 		D9ED46612F70C34E00632060 /* ISSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSView.swift; sourceTree = "<group>"; };
@@ -80,7 +87,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D9C284062F6EB93300D0FEF9 /* Exceptions for "widget" folder in "widgetExtension" target */ = {
+		D9B73F332F8660F000B0D624 /* Exceptions for "widget" folder in "widgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -98,7 +105,7 @@
 		D99203482F475D47005B0E55 /* widget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D9C284062F6EB93300D0FEF9 /* Exceptions for "widget" folder in "widgetExtension" target */,
+				D9B73F332F8660F000B0D624 /* Exceptions for "widget" folder in "widgetExtension" target */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 		D99203322F460874005B0E55 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D9B73F3C2F87542F00B0D624 /* MainBlocksM.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 		D99203362F4608C8005B0E55 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D9B73F412F87652700B0D624 /* TermsVM.swift */,
 				D9C2A7362F6F9B4F00E9FC3B /* MainScreenVM.swift */,
 			);
 			path = ViewModel;
@@ -188,6 +197,7 @@
 		D99203392F46094E005B0E55 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D9B73F3E2F8760E900B0D624 /* Temp */,
 				D992033A2F46096C005B0E55 /* Network */,
 				D99203382F4608ED005B0E55 /* CoreData */,
 			);
@@ -204,8 +214,8 @@
 		D992033B2F46A597005B0E55 /* Widgets */ = {
 			isa = PBXGroup;
 			children = (
+				D9B73F342F86626000B0D624 /* widgetsView.swift */,
 				D99203482F475D47005B0E55 /* widget */,
-				D992033C2F46A5B8005B0E55 /* WidgetsView.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -217,6 +227,14 @@
 				D99203462F475D47005B0E55 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9B73F3E2F8760E900B0D624 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				D9B73F3F2F8760F500B0D624 /* dataTerms.swift */,
+			);
+			path = Temp;
 			sourceTree = "<group>";
 		};
 		D9B752222F7612260057424A /* MainBlocks */ = {
@@ -361,19 +379,22 @@
 				D99203292F45FD4A005B0E55 /* Persistence.swift in Sources */,
 				D9ED466F2F70C93100632060 /* ISTView.swift in Sources */,
 				D992032C2F45FD4A005B0E55 /* Tempus_Fugit.xcdatamodeld in Sources */,
-				D992033D2F46A5B8005B0E55 /* WidgetsView.swift in Sources */,
+				D9B73F432F87682000B0D624 /* MainScreenVM.swift in Sources */,
 				D99203252F45FD48005B0E55 /* MainScreen.swift in Sources */,
 				D9B752242F76126A0057424A /* MainBlocksV.swift in Sources */,
 				D9ED46632F70C55300632060 /* ISSView.swift in Sources */,
 				D9ED46672F70C92500632060 /* TIPSView.swift in Sources */,
 				D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */,
+				D9B73F3D2F87549200B0D624 /* MainBlocksM.swift in Sources */,
 				D9ED46752F70CB0300632060 /* OSView.swift in Sources */,
 				D9ED46692F70C92E00632060 /* UPPView.swift in Sources */,
 				D9ED46732F70C93500632060 /* ITView.swift in Sources */,
 				D9ED46652F70C8E800632060 /* DBView.swift in Sources */,
 				D9ED46712F70C93200632060 /* TIView.swift in Sources */,
+				D9B73F422F87681A00B0D624 /* TermsVM.swift in Sources */,
 				D9ED466B2F70C92F00632060 /* OOPView.swift in Sources */,
 				D9ED466D2F70C93000632060 /* OAPView.swift in Sources */,
+				D9B73F402F87613700B0D624 /* dataTerms.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B73F352F86626A00B0D624 /* widgetsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +616,7 @@
 				INFOPLIST_FILE = View/Widgets/widget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = widget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -624,6 +647,7 @@
 				INFOPLIST_FILE = View/Widgets/widget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = widget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

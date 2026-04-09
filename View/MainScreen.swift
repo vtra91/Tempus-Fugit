@@ -118,14 +118,26 @@ struct MainScreen: View {
                         .multilineTextAlignment(.center)
                 }.padding()
                 
-
-                ScrollView(.vertical, showsIndicators: false) {
-                    
-                    ForEach(0..<10) { i in
-                        NavigationLink(value: chapters[i]) {
-                            ChapterBlock(chapterLink: chapters[i])
-                        }
+                DisclosureGroup ("Главы") {
+                    ScrollView(.vertical, showsIndicators: false) {
                         
+                        ForEach(0..<10) { i in
+                            NavigationLink(value: chapters[i]) {
+                                ChapterBlock(chapterLink: chapters[i])
+                            }
+                            
+                        }
+                    }
+                }
+                DisclosureGroup ("Тесты") {
+                    ScrollView(.vertical, showsIndicators: false) {
+                        
+                        ForEach(0..<10) { i in
+                            NavigationLink(value: chapters[i]) {
+                                ChapterBlock(chapterLink: chapters[i])
+                            }
+                            
+                        }
                     }
                 }
 
