@@ -16,11 +16,11 @@ struct widgetProvider: TimelineProvider {
         var entries: [widgetEntry] = []
         let motivation = Motivation()
         for i in 0..<10 {
-            var enteryDate = Calendar.current.date(byAdding: .day, value: i, to: Date())
+            let enteryDate = Calendar.current.date(byAdding: .hour, value: i, to: Date())
             let coolPhrase = motivation.coolThings.randomElement()
             let coolEmoji = motivation.icon.randomElement()
             let entry = widgetEntry(date: enteryDate!, diploma: coolPhrase!, icon: coolEmoji!)
-
+            entries.append(entry)
         }
         
         let timelineEntries = Timeline(entries: entries, policy: .atEnd)

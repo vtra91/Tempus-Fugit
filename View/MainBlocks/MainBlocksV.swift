@@ -40,10 +40,12 @@ struct TermBlock: View {
                 ZStack {
                     DisclosureGroup(term, isExpanded: $isOpened) {
                         Text(explanation)
-                            .foregroundStyle(.white).bold()
+                            .foregroundStyle(.white)
                            
                         ForEach(imageList ?? [], id: \.self) {i in
                                 Image(i)
+                                .resizable()
+                                .scaledToFit()
                         }
                         
                        
@@ -52,6 +54,8 @@ struct TermBlock: View {
                     .padding(.leading, 35)
                     .padding(.trailing, 15)
                     .padding(.vertical, 12)
+                    .multilineTextAlignment(.leading)
+                    .bold()
                     .onTapGesture {
                         withAnimation(.easeInOut) {
                             isOpened.toggle()

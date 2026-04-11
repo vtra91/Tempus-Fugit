@@ -12,13 +12,12 @@ struct TIPSView: View {
         .foregroundStyle(.white)
         .background(.red)
         //MARK: ForEach требует Identifiable в случаях реальных данных из БД, а Hashable - для неизменяемых значений
-        ForEach(VM.termPlusDefenition) { i in
-            TermBlock(imageList: i.images, term: i.term, explanation: i.definition)
+        ScrollView {
+            ForEach(VM.termPlusDefenition) { i in
+                TermBlock(imageList: i.images, term: i.term, explanation: i.definition)
+            }
         }
-        Image("testYourMight")
-        Text("dsfsd")
-            .font(.headline)
-            .foregroundStyle(.white).bold()
+
     }
 }
 
