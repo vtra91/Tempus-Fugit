@@ -37,3 +37,7 @@ struct dataTerms {
     ]
     
 }
+
+struct otherImportantShit {
+    var VUZ: [String] = ["СПБГМТУ", "ВСЕ", "ИРНИТУ", "МОСПОЛИТЕХ"]
+}

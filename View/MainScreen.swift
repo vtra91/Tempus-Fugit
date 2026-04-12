@@ -3,127 +3,148 @@ import CoreData
 import SwiftUIIntrospect
 
 struct MainScreen: View {
-    let catchphrases = [
-            // Из литературы
-            "Быть или не быть — вот в чём вопрос",
-            "А судьи кто",
-            "Счастливые часов не наблюдают",
-            "Мы в ответе за тех, кого приручили",
-            "Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему",
-            "Человек — это звучит гордо",
-            "Красота спасёт мир",
-            "Любви все возрасты покорны",
-            "Чем меньше женщину мы любим, тем легче нравимся мы ей",
-            "А Васька слушает да ест",
-            
-            // Из кино
-            "Я буду звонить тебе каждый день, а может быть, и ночью",
-            "Наша служба и опасна, и трудна, и на первый взгляд как будто не видна",
-            "Штирлиц, а вас я попрошу остаться",
-            "Кто не работает, тот ест",
-            "Деньги — это зло, но без них никак",
-            "Я не волшебник, я только учусь",
-            "Восток — дело тонкое",
-            "С легким паром",
-            "Жить хорошо, а хорошо жить — еще лучше",
-            
-            // Известные цитаты
-            "Знание — сила",
-            "Пришёл, увидел, победил",
-            "Время — деньги",
-            "Кто владеет информацией, тот владеет миром",
-            "Движение — это жизнь",
-            "После нас хоть потоп",
-            "Цель оправдывает средства",
-            "Человек человеку волк",
-            "Хлеба и зрелищ",
-            "Платон мне друг, но истина дороже",
-            
-            // Русские пословицы и поговорки
-            "Без труда не выловишь и рыбку из пруда",
-            "Век живи — век учись",
-            "Глаза боятся, а руки делают",
-            "Делу время, потехе час",
-            "Как аукнется, так и откликнется",
-            "Лучше синица в руках, чем журавль в небе",
-            "Москва не сразу строилась",
-            "На безрыбье и рак рыба",
-            "Один в поле не воин",
-            "Поспешишь — людей насмешишь",
-            
-            // Современные мемы и крылатые выражения
-            "Жиза",
-            "Кринж",
-            "Рофл",
-            "Краш",
-            "Хайп",
-            "Чекай",
-            "Зашквар",
-            "Токсичный",
-            "Изи",
-            "Пруф"
-        ]
-    let popularActors = [
-        "Леонардо ДиКаприо",
-        "Том Хэнкс",
-        "Брэд Питт",
-        "Джонни Депп",
-        "Роберт Дауни-младший",
-        "Киану Ривз",
-        "Мэтт Дэймон",
-        "Уилл Смит",
-        "Дензел Вашингтон",
-        "Хоакин Феникс",
-        "Райан Гослинг",
-        "Крис Хемсворт",
-        "Роберт Паттинсон",
-        "Том Харди",
-        "Кристиан Бэйл",
-        "Хью Джекман",
-        "Джейк Джилленхол",
-        "Брэдли Купер",
-        "Адам Сэндлер",
-        "Джордж Клуни"
-    ]
-    let chapters = [
-        "БД",
-        "ТИПС",
-        "УПП",
-        "ООП",
-        "ОАП",
-        "ИСС",
-        "ИСТ",
-        "ТИ",
-        "ИТ",
-        "ОС"
-    ]
+    @StateObject var vm = MainScreenVM()
 
+    @State var pickedVUZI = "ВСЕ"
+    var greeting: String {
+        let time = DateFormatter()
+        time.dateFormat = "HH:mm"
+        let curr = Calendar.current.dateComponents([.hour, .minute], from: Date())
+        switch curr.hour {
+        case 6,7,8,9,10,11,12: return "Доброго утречка"
+        case 13,14,15,16,17,18: return "Доброго дня"
+        case 19,20,21,22,23: return "Добрый вечер"
+        case 0,1,2,3,4,5: return "Доброй ночи"
+        default: return "Доброго времени суток"
+        }
+    }
     var body: some View {
         NavigationStack {
-        ZStack {
+            ZStack(alignment: .top) {
             Color("MainColors")
                 .ignoresSafeArea()
             VStack {
-                VStack {
-                    Text("\"\(catchphrases.randomElement()!) \"")
-                        .font(.system(size: 26, weight: .bold))
+
+                HStack {
+                  Text("\(greeting), ")
                         .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                    RoundedRectangle(cornerRadius: 25)
-                        .fill(.white)
-                        .frame(width: 150, height: 2)
-                    Text("\(popularActors.randomElement()!)")
-                        .font(.system(size: 20, weight: .bold))
+                        .font(.headline)
+                    +
+                  Text("\nVelstadt")
                         .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                }.padding()
+                        .bold()
+                        .font(.title)
+                  Spacer()
+                    Menu {
+                        ForEach(vm.listOfVUZI) { option in
+                            Button {
+                                pickedVUZI = option.name
+                            } label: {
+                                HStack {
+                                    Text(option.name).bold()
+                                    Image(option.name)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 30, height: option.name == "ВСЕ" ? 15: 30)
+                                    Spacer()
+                                    if pickedVUZI == option.name {
+                                        Image(systemName: "checkmark")
+                                            .foregroundStyle(.blue)
+                                    }
+                                }
+                            }
+                        }
+                    } label: {
+                        HStack(spacing: 8) {
+                            Text(pickedVUZI).foregroundStyle(.white).bold()
+                            Image(pickedVUZI)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 40, height: 40)
+                        }
+                        .padding(8)
+                        .frame(maxWidth: 200)
+                        .background {
+                            RoundedRectangle(cornerRadius: 16).fill(.black)
+                        }
+                    }
+                    .menuStyle(.borderlessButton)
+                    .menuIndicator(.hidden)
+
+                }
+                .padding()
+                
+                Button(
+                    action: {
+                        
+                    },
+                    label: {
+                        ZStack() {
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color(#colorLiteral(red: 0.118035827, green: 0.006031205873, blue: 0.0009314952345, alpha: 1)))
+                                .frame(width: .infinity, height: 100)
+                                .padding()
+
+                                ZStack {
+                                    VStack {
+                                        
+                                        Text("Итоговый тест")
+                                            .font(.system(size: 28, design: .monospaced))
+                                            .foregroundStyle(.white)
+                                            .bold()
+                                        Text("90 вопросов, 1.5 часа")
+                                            .font(.system(size: 16))
+                                            .foregroundStyle(.white)
+                                            .bold()
+                                    }
+                                    .shadow(color:.orange, radius: 3)
+
+                                    Circle()
+                                        .fill(Color(#colorLiteral(red: 1, green: 0.1803079459, blue: 0.08132103552, alpha: 1)))
+                                        .frame(width: 50, height: 50)
+                                        .blur(radius: 10, opaque: false)
+                                        .offset(x: -145, y:10)
+                                    Ellipse()
+                                        .fill(Color(#colorLiteral(red: 1, green: 0.7880430491, blue: 0.5573760829, alpha: 1)))
+                                        .frame(width: 35, height:  20)
+                                        .blur(radius:4, opaque: false)
+                                      .offset(x: -145, y:25)
+                                    Ellipse()
+                                        .fill(Color(#colorLiteral(red: 1, green: 0.7293782458, blue: 0.09560707161, alpha: 1)))
+                                        .frame(width: 35, height:  20)
+                                        .blur(radius:5, opaque: false)
+                                      .offset(x: -145, y:15)
+                                    
+                                    Circle()
+                                        .fill(Color(#colorLiteral(red: 1, green: 0.1803079459, blue: 0.08132103552, alpha: 1)))
+                                        .frame(width: 50, height: 50)
+                                        .blur(radius: 10, opaque: false)
+                                        .offset(x: 145, y:10)
+                                    Ellipse()
+                                        .fill(Color(#colorLiteral(red: 1, green: 0.7880430491, blue: 0.5573760829, alpha: 1)))
+                                        .frame(width: 35, height:  20)
+                                        .blur(radius:4, opaque: false)
+                                      .offset(x: 145, y:25)
+                                    Ellipse()
+                                        .fill(Color(#colorLiteral(red: 1, green: 0.7293782458, blue: 0.09560707161, alpha: 1)))
+                                        .frame(width: 35, height:  20)
+                                        .blur(radius:5, opaque: false)
+                                      .offset(x: 145, y:15)
+
+                            }
+                        }
+
+                        
+                    }
+                )
+                
                 
                 DisclosureGroup ("Главы") {
                     ScrollView(.vertical, showsIndicators: false) {
                         
                         ForEach(0..<10) { i in
-                            NavigationLink(value: chapters[i]) {
-                                ChapterBlock(chapterLink: chapters[i])
+                            NavigationLink(value: vm.chapters[i]) {
+                                ChapterBlock(chapterLink: vm.chapters[i])
                             }
                             
                         }
@@ -132,9 +153,9 @@ struct MainScreen: View {
                 DisclosureGroup ("Тесты") {
                     ScrollView(.vertical, showsIndicators: false) {
                         
-                        ForEach(0..<10) { i in
-                            NavigationLink(value: chapters[i]) {
-                                ChapterBlock(chapterLink: chapters[i])
+                        ForEach(0..<10) { chapterName in
+                            NavigationLink(value: vm.chapters[chapterName]) {
+                                ChapterBlock(chapterLink: vm.chapters[chapterName])
                             }
                             
                         }
@@ -206,3 +227,20 @@ struct ChapterBlock: View {
     MainScreen()
 }
 
+
+
+/*
+VStack {
+    Text("\"\(catchphrases.randomElement()!) \"")
+        .font(.system(size: 26, weight: .bold))
+        .foregroundStyle(.white)
+        .multilineTextAlignment(.center)
+    RoundedRectangle(cornerRadius: 25)
+        .fill(.white)
+        .frame(width: 150, height: 2)
+    Text("\(popularActors.randomElement()!)")
+        .font(.system(size: 20, weight: .bold))
+        .foregroundStyle(.white)
+        .multilineTextAlignment(.center)
+}.padding()
+    */

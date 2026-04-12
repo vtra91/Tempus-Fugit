@@ -15,18 +15,18 @@ struct widgetsView: View {
     var body: some View {
         VStack(alignment: .center){
             HStack{
-                Text("Дней до диплома: \(days)")
+                Text(days == 1 ? "GLHF" : "Дней до диплома: \(days)")
             }
             .font(.title3)
             .bold()
             .padding(.bottom, 8)
             
-            Text(entry.diploma)
+            Text(days == 1 ? "" : entry.diploma)
                 .font(.headline)
 
             
             Spacer()
-            Text("\(entry.icon)")
+            Text("\(days == 1 ? "🍀" : entry.icon)")
 
 
         }
