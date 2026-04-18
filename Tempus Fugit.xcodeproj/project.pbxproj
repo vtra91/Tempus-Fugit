@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D910F6542F93572A00F9D7A4 /* ClosedTestV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D910F6532F93572A00F9D7A4 /* ClosedTestV.swift */; };
 		D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203222F45FD48005B0E55 /* Tempus_FugitApp.swift */; };
 		D99203252F45FD48005B0E55 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99203242F45FD48005B0E55 /* MainScreen.swift */; };
 		D99203272F45FD4A005B0E55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D99203262F45FD4A005B0E55 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 		D99203472F475D47005B0E55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99203462F475D47005B0E55 /* SwiftUI.framework */; };
 		D99203562F475D49005B0E55 /* widgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D99203422F475D47005B0E55 /* widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D9AB91932F8CD45300D0C8BD /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = D9AB91922F8CD43A00D0C8BD /* questions.json */; };
+		D9AB91A62F8F43C500D0C8BD /* SpacedRepetitionV.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AB91A52F8F43B600D0C8BD /* SpacedRepetitionV.swift */; };
 		D9B73F352F86626A00B0D624 /* widgetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B73F342F86626000B0D624 /* widgetsView.swift */; };
 		D9B73F3D2F87549200B0D624 /* MainBlocksM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B73F3C2F87542F00B0D624 /* MainBlocksM.swift */; };
 		D9B73F402F87613700B0D624 /* dataTerms.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B73F3F2F8760F500B0D624 /* dataTerms.swift */; };
@@ -61,6 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D910F6532F93572A00F9D7A4 /* ClosedTestV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosedTestV.swift; sourceTree = "<group>"; };
 		D992031F2F45FD48005B0E55 /* Tempus Fugit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempus Fugit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D99203222F45FD48005B0E55 /* Tempus_FugitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempus_FugitApp.swift; sourceTree = "<group>"; };
 		D99203242F45FD48005B0E55 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		D99203442F475D47005B0E55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D99203462F475D47005B0E55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		D9AB91922F8CD43A00D0C8BD /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		D9AB91A52F8F43B600D0C8BD /* SpacedRepetitionV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacedRepetitionV.swift; sourceTree = "<group>"; };
 		D9B73F342F86626000B0D624 /* widgetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = widgetsView.swift; sourceTree = "<group>"; };
 		D9B73F3C2F87542F00B0D624 /* MainBlocksM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBlocksM.swift; sourceTree = "<group>"; };
 		D9B73F3F2F8760F500B0D624 /* dataTerms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataTerms.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 		D99203372F4608E0005B0E55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D9AB91A32F8F438A00D0C8BD /* Exam */,
 				D99203242F45FD48005B0E55 /* MainScreen.swift */,
 				D9B752222F7612260057424A /* MainBlocks */,
 				D9C2A7352F6F8DDE00E9FC3B /* Chapters */,
@@ -232,6 +237,23 @@
 				D99203462F475D47005B0E55 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9AB91A32F8F438A00D0C8BD /* Exam */ = {
+			isa = PBXGroup;
+			children = (
+				D9AB91A52F8F43B600D0C8BD /* SpacedRepetitionV.swift */,
+				D9AB91A42F8F439A00D0C8BD /* ClosedTests */,
+			);
+			path = Exam;
+			sourceTree = "<group>";
+		};
+		D9AB91A42F8F439A00D0C8BD /* ClosedTests */ = {
+			isa = PBXGroup;
+			children = (
+				D910F6532F93572A00F9D7A4 /* ClosedTestV.swift */,
+			);
+			path = ClosedTests;
 			sourceTree = "<group>";
 		};
 		D9B73F3E2F8760E900B0D624 /* Temp */ = {
@@ -394,9 +416,11 @@
 				D99203232F45FD48005B0E55 /* Tempus_FugitApp.swift in Sources */,
 				D9B73F3D2F87549200B0D624 /* MainBlocksM.swift in Sources */,
 				D9ED46752F70CB0300632060 /* OSView.swift in Sources */,
+				D910F6542F93572A00F9D7A4 /* ClosedTestV.swift in Sources */,
 				D9ED46692F70C92E00632060 /* UPPView.swift in Sources */,
 				D9ED46732F70C93500632060 /* ITView.swift in Sources */,
 				D9ED46652F70C8E800632060 /* DBView.swift in Sources */,
+				D9AB91A62F8F43C500D0C8BD /* SpacedRepetitionV.swift in Sources */,
 				D9B73F732F8B81A200B0D624 /* MainScreenM.swift in Sources */,
 				D9ED46712F70C93200632060 /* TIView.swift in Sources */,
 				D9B73F422F87681A00B0D624 /* TermsVM.swift in Sources */,
